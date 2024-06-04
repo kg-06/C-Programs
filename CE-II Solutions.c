@@ -405,3 +405,20 @@
 //     return 0;
 // }   
 
+#include <stdio.h>
+float radius,form,form1;
+float circumference(float radius){
+    form= 2*3.14*radius;
+    return form;
+}
+float area(float radius){
+    form1-=3.14*radius*radius;
+    return form1;
+}
+int main(){
+    printf("Enter the radius :\n");
+    scanf("%f",&radius);
+    printf("The circumference of the circle is : \n %.2f\n",circumference(radius));
+    printf("The area of the circle is : \n %.2f",area(radius));
+}
+
