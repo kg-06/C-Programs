@@ -182,6 +182,107 @@
 //     return 0;
 // }
 
+// //leap year finder
+// #include<stdio.h>
+// int leap(int n){
+//     if (n%4==0){
+//         if(n%100!=0){
+//             return 1;
+//         }
+//         else if(n%400==0){
+//             return 1;
+//         }
+//         else{
+//             return 0;
+//         }
+//     }
+//     else{
+//         return 0;
+//     }
 
+// }
+// int main(){
+//     int n;
+//     scanf("%d",&n);
+//     if(leap(n)){
+//         printf("leap");
+//     }
+//     else{
+//         printf("not leap");
+//     }
+//     return 0;
+// }
+
+
+//menu factorail / prime or exit
+// #include<stdio.h>
+// int factorial(int n){
+//     if(n==0){
+//         return 1;
+//     }
+//     return n* factorial(n-1);
+// }
+// int prime(int n){
+//     for(int i=2; i<n/2;i++){
+//         if(n%i==0){
+//             return 0;
+//         }
+//         else{
+//             return 1;
+//         }
+//     }
+// }
+// int menu(){
+//     int choice,n;
+//     printf("\nPress 1 for factorail");
+//     printf("\nPress 2 for finding prime or not");
+//     printf("\nPress 3 for Exit");
+//     printf("\nEnter Choice: ");
+//     scanf("%d",&choice);
+//     switch(choice){
+//         case 1:
+//         printf("Enter a number(1-10):");
+//         scanf("%d",&n);
+//         printf("factorail = %d",factorial(n));
+//         menu();
+//         break;
+//         case 2:
+//         printf("Enter a number:");
+//         scanf("%d",&n);
+//         prime(n)?printf("prime"):printf("not prime");
+//         menu();
+//         break;
+//         case 3:
+//         break;
+//         default:
+//         printf("Invalid choice!");
+//         menu();
+//         break;
+//     }
+// }
+// int main(){
+//     menu();
+//     return 0;
+// }
+
+//transpose of matrix
+// #include<stdio.h>
+// int main(){
+//     int matrix[10][10];
+//     int i,j,rows,cols;
+//     scanf("%d %d",&rows,&cols);
+//     for(i=0;i<rows;i++){
+//         for(j=0;j<cols;j++){
+//             scanf("%d",&matrix[i][j]);
+//         }
+//     }
+//     for(j=0;j<cols;j++){
+//         for(i=0;i<rows;i++){
+//             printf("%d ",matrix[i][j]);
+//         }
+//         printf("\n");
+//     }
+//     return 0;
+// }
 
 
