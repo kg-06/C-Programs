@@ -65,3 +65,123 @@
 //     return 0;
 // }
 
+// //to count alphabets , digits and special char in string(without ctype.h)
+// #include<stdio.h>
+// #include<string.h>
+// int main(){
+//     char str[30];
+//     int alpha=0,digit=0,special=0;
+//     fgets(str, sizeof(str), stdin);
+//     int len= strlen(str);
+//     if ( len>0 && str[len-1]=='\n'){
+//         str[len-1]='\0';
+//     }
+//     for (int i=0; i<strlen(str);i++){
+//         if(str[i]<='z' && str[i]>='a'||str[i]<='Z' && str[i]>='A'){
+//             alpha++;
+//         }
+//         else if (str[i]<='9' && str[i]>='0'){
+//             digit++;
+//         }
+//         else{
+//             special++;
+//         }
+//     }
+//     printf("%d\n",alpha);
+//     printf("%d\n",digit);
+//     printf("%d",special);
+//     return 0;
+// }
+
+// //to count alphabets , digits and special char in string(with ctype.h)
+// #include<stdio.h>
+// #include<ctype.h>
+// #include<string.h>
+// int main(){
+//     char str[30];
+//     int alpha=0,digit=0,special=0;
+//     fgets(str, sizeof(str), stdin);
+//     int len= strlen(str)-1;
+//     for (int i=0; i<len;i++){
+//         if(isalpha(str[i])){
+//             alpha++;
+//         }
+//         else if (isdigit(str[i])){
+//             digit++;
+//         }
+//         else{
+//             special++;
+//         }
+//     }
+//     printf("%d\n",alpha);
+//     printf("%d\n",digit);
+//     printf("%d",special);
+//     return 0;
+// }
+
+// // to remove duplicates from string
+// #include<stdio.h>
+// #include<string.h>
+// char* duplicate_remover(char str[]){
+//     int index=0;
+//     int i;
+//     for(i=0; i<strlen(str); i++){
+//         int j;
+//         for(j=0; j<i; j++){
+//             if(str[i]==str[j]){
+//                 break;
+//             }    
+//         }
+//         if(j==i){
+//             str[index++]=str[i];
+//             }
+//     }
+//     str[index]='\0';
+//     return str;
+// }
+// int main(){
+//     char str[30],str2[30];
+//     scanf("%s",&str);
+//     strcpy(str2,str);
+//     printf("\n%s",str2);
+//     printf("\n%s",duplicate_remover(str));
+//     return 0;
+// }
+
+// // to count the frequency of each char in string
+// #include<stdio.h>
+// int main(){
+//     char str[100];
+//     int i,count[26]={0};
+//     scanf("%s",&str);
+//     for( i=0; str[i]!='\0';i++){
+//         count[str[i]-'a']++;
+//     }
+//     for(i=0;i<26;i++){
+//         if(count[i]==0){
+//             continue;
+//         }
+//         printf("'%c'= %d\n",'a'+i,count[i]);
+//     }
+//     return 0;
+// }
+
+// // swapping by call by value
+// #include<stdio.h>
+// void swap(int a, int b){
+//     a=a+b;
+//     b=a-b;
+//     a=a-b;
+//     printf("\nAfter swapping:%d %d",a,b);
+// }
+// int main(){
+//     int a,b;
+//     scanf("%d %d",&a,&b);
+//     printf("Before swapping:%d %d",a,b);
+//     swap(a,b);
+//     return 0;
+// }
+
+
+
+
