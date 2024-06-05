@@ -285,4 +285,204 @@
 //     return 0;
 // }
 
+// // to find largest and second largest number in array
+// #include<stdio.h>
+// int arr_sort(int* arr,int size){
+//     for(int i=0;i<size-1;i++){
+//         for(int j=0;j<size-1-i;j++){
+//             if(arr[j]>arr[j+1]){
+//             arr[j]=arr[j]+arr[j+1];
+//             arr[j+1]=arr[j]-arr[j+1];
+//             arr[j]=arr[j]-arr[j+1];
+//             }
+//         }   
+//     }
+//     return 0;
+
+// }
+// int main(){
+//     int i,arr[100],size;
+//     scanf("%d",&size);
+//     for(i=0;i<size;i++){
+//         scanf("%d",&arr[i]);
+//     }
+//     arr_sort(arr,size);
+//     printf("%d\n%d",arr[size-1],arr[size-2]);
+//     return 0;
+// }
+
+// // students marks counter using structure
+// #include<stdio.h>
+// int main(){
+//     int n;
+//     struct Student
+//     { char name[20];
+//       int roll;
+//       int marks[3];
+//     };
+//     printf("Enter no. of students: ");
+//     scanf("%d",&n);
+//     struct Student student[10];
+//     for(int i=0; i<n;i++){
+//         scanf("%s",&student[i].name);
+//         scanf("%d",&student[i].roll);
+//         for(int j=0;j<3;j++){
+//             scanf("%d",&student[i].marks[j]);
+//         }       
+//     }
+//     for(int i=0;i<n;i++){
+//         float avg=0;
+//         for(int j=0;j<3;j++){
+//             avg+=student[i].marks[j];
+//         }
+//         printf("%.2f\n",avg/3);  
+//     }
+//     return 0;   
+// }
+
+// // even and odd digit counter
+// #include<stdio.h>
+// void count(int n){
+//     int even=0, odd=0;
+//     for(int i=n ; i>0;i=i/10){
+//         if((i%10)%2==0){
+//             even++;
+//         }
+//         else{
+//             odd++;
+//         }
+//     }
+//     printf("%d\n%d",even,odd);
+// }
+// int main(){
+//     int n;
+//     scanf("%d",&n);
+//     count(n);
+//     return 0;
+// }
+
+// // leftmost digit day extractor
+// #include<stdio.h>
+// int left_finder(int n,int left){
+//     for(int i=n;i>0;i=i/10){
+//         left=i%10;
+//     }
+//     return left;
+// }
+// int main(){
+//     int n,left=0;
+//     scanf("%d",&n);
+//     left=left_finder(n,left);
+//     switch(left){
+//         case 1: printf("Monday");
+//                 break;
+//         case 2: printf("Tuesday");
+//                 break;
+//         case 3: printf("Wednesday");
+//                 break;
+//         case 4: printf("Thursday");
+//                 break;
+//         case 5: printf("Friday");
+//                 break;
+//         case 6: printf("Saturday");
+//                 break;
+//         case 7: printf("Sunday");
+//                 break;
+//         default: printf("INVALID NUMBER!");                                              
+//     }
+//     return 0;
+// }
+
+// // to find differnce of largest and smallest in array
+// #include<stdio.h>
+// int array_sort(int* arr){
+//     for(int i=0;i<5-1;i++){
+//         for(int j=0;j<5-1-i;j++){
+//             if(arr[j]>arr[j+1]){
+//                 arr[j]=arr[j]+arr[j+1];
+//                 arr[j+1]=arr[j]-arr[j+1];
+//                 arr[j]=arr[j]-arr[j+1];
+//             }
+//         }
+//     }
+//     return 0;
+// }
+// int main(){
+//     int arr[5];
+//     for(int i=0;i<5;i++){
+//         scanf("%d",&arr[i]);
+//     }
+//     array_sort(arr);
+//     printf("%d",arr[4]-arr[0]);
+//     return 0;
+// }
+
+// // swap two numbers using pointers
+// #include<stdio.h>
+// void swap(int*a , int *b){
+//     *a=*a+*b;
+//     *b=*a-*b;
+//     *a=*a-*b;
+// }
+// int main(){
+//     int a,b;
+//     scanf("%d %d",&a,&b);
+//     swap(&a,&b);
+//     printf("After Swapping: %d %d",a,b);
+// }
+
+// // to reverse the string and check if string is pallindrome or not
+// #include<stdio.h>
+// #include<string.h>
+// int pallindrome(char str[]){
+//     int index=0;
+//     int len=strlen(str);
+//     if(str[len-1]=='\n'){
+//         str[len-1]='\0';
+//         len--;
+//     }
+//     char str2[30];
+//     for(int i=len-1 ;i>=0;i--){
+//         str2[index++]=str[i];
+//     }
+//     str[index]='\0';
+//     printf("%s",str2);
+//     if(strcmp(str2,str)==0){
+//         return 1;
+//     }
+//     else{
+//         return 0;
+//     }
+// }
+// int main(){
+//     char str[30];
+//     fgets(str,sizeof(str),stdin);
+//     pallindrome(str)?printf("\npallindrome"):printf("\nnot pallindrome");
+//     return 0;
+// }
+
+// // toggle upper to lower
+// #include<stdio.h>
+// #include<string.h>
+// #include<ctype.h>
+// void toggle(char str[]){
+//     char str2[30];
+//     int index=0;
+//     for(int i=0;i<strlen(str);i++){
+//         if(islower(str[i])){
+//             str2[index++]=toupper(str[i]);
+//         }
+//         else{
+//             str2[index++]=tolower(str[i]);     
+//         }
+//     }
+//     str2[index]='\0';
+//     printf("%s",str2);
+// }
+// int main(){
+//     char str[30];
+//     scanf("%s",&str);
+//     toggle(str);
+//     return 0;
+// }
 
